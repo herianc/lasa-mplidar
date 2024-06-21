@@ -28,7 +28,7 @@ media, desvio_padrao = particle_height(lidar, 6)
 extract_info(path: str, file_name:str) -> pandas.DataFrame:
 ```
 
-Função que extrai algumas informações do arquivo NetCDF do LIDAR (Abaixo a lista de variáveis obtidas). A função recebe o caminho/diretório do arquivo e um nome para o arquivo csv que será criado com a extração e retorna um DataFrame do Pandas com as informações obtidas após "percorrer" todos os arquivos .nc presentes na pasta. 
+Função que extrai algumas informações de arquivos NetCDF do LIDAR (Abaixo a lista de variáveis obtidas) presentes em um diretório. A função recebe o caminho/diretório do arquivo e um nome para o arquivo csv que será criado com a extração e retorna um DataFrame do Pandas com as informações obtidas após "percorrer" todos os arquivos .nc presentes na pasta. 
 
 __Dados extraídos__:
 - data_hora,
