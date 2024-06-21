@@ -13,9 +13,7 @@ Esta função é utilizada durante a execução da função __mplscripts.extract
 Dataset que contém os dados NetCDF (.nc) do LIDAR 
 
 - __ref_particle: int__<br>
-Valor referente à partícula. 
-
-Valores de referência das partícula:  0 - Water Cloud, 1 - Mixed Cloud, 2 - Ice/Dust/Ash, 3 - Rain/Dust, 4 - Molecular,  5 - Clean Aerossol, 6 - Polluted Aerossol, 7 - Undefined.  Valores disponíveis no arquivo NetCDF na variável __particle_type_mapping__.
+Valor referente à partícula. Valores de referência das partícula:  0 - Water Cloud, 1 - Mixed Cloud, 2 - Ice/Dust/Ash, 3 - Rain/Dust, 4 - Molecular,  5 - Clean Aerossol, 6 - Polluted Aerossol, 7 - Undefined.  Valores disponíveis no arquivo NetCDF na variável __particle_type_mapping__.
 
 ### Exemplo de chamada 
 ```python
@@ -30,7 +28,7 @@ media, desvio_padrao = particle_height(lidar, 6)
 extract_info(path: str, file_name:str) -> pandas.DataFrame:
 ```
 
-Função que extrai algumas informações do arquivo NetCDF do LIDAR (Abaixo a lista de variáveis obtidas). A função recebe o caminho/diretório do arquivo e um nome para o arquivo csv que será criado com a extração e retorna um DataFrame do Pandas com as informações obtidas. 
+Função que extrai algumas informações do arquivo NetCDF do LIDAR (Abaixo a lista de variáveis obtidas). A função recebe o caminho/diretório do arquivo e um nome para o arquivo csv que será criado com a extração e retorna um DataFrame do Pandas com as informações obtidas após "percorrer" todos os arquivos .nc presentes na pasta. 
 
 __Dados extraídos__:
 - data_hora,
